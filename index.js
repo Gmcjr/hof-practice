@@ -97,6 +97,7 @@ function longerThanTwoHours(array){
   
 }
 
+
 /*
 Create a function called getMoviesByMonth that takes in an array of movie
 objects and a month. This function should use the native filter method to return
@@ -106,6 +107,8 @@ a new array of movies that were logged in the input month.
 function getMoviesByMonth(array, month){
   
 }
+
+
 
           
 /*
@@ -122,11 +125,13 @@ function getRuntimes(array){
   
 }
 
+
+
 /*
 Create a function called getTitleAndYear that takes in an array of movies.
-This function should use the native filter metho to return a new array of
+This function should use the native filter method to return a new array of
 strings. Each string should be the move's title followed by the year in
-parenthis.
+parenthesis.
 
 example output:
 getTitleAndYear(movies);
@@ -137,22 +142,26 @@ function getTitleAndYear(movies){
   
 }
 
+
+
 /*
 Create a function called getHorrorTitles that takes in an array of movies.
 This function should use the native reduce method to return a new array of
-the titles of every movie that has "Horror" in the move genres array.
+the titles of every movie that has "Horror" in the movie genres array.
 */
 
 function getHorrorTitles(movies){
   
 }
 
+// seed?
+
 /*
 Create a function called getFirstComments that takes in an array of movies.
 This function should use the native reduce method to return a new array of 
-strings of the first comment in each movie's reviews array followed by a 
-linebreak character. Those strings should include the reviewer's username 
-and the review followd by a colon and ending with linebreak character.
+strings of the first comment in each movie's comments array followed by a 
+linebreak character. Those strings should include the commenter's username 
+and the comment follow by a colon and ending with linebreak character.
 
 example output:
 getFirstComment(movies)
