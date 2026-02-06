@@ -1,4 +1,4 @@
-const lbDiary = [
+const movies = [
   {
     title: 'The Rule of Jenny Pen',
     director: 'James Ashcroft',
@@ -93,28 +93,24 @@ filter method to return a new array of only the movie entry objects that
 have a runtime greater than 2 hours.
 */
 
-function longerThanTwoHours(){
-
+function longerThanTwoHours(array){
+  
 }
 
 /*
-Create a function called filterByCommenter that takes in an array of movie
-entries objects as you see above and a string representing a username. This
-function should use the native filter method to return a new array of only
-the movie entry objects that have a comment by the input commenter.
-
-example output:
-filterByCommenter(lbDiary, 'elizabeth-dane');
-// => [{Rule of Jenny Pen}, {Mickey 17}]
+Create a function called getMoviesByMonth that takes in an array of movie
+objects and a month. This function should use the native filter method to return
+a new array of movies that were logged in the input month.
 */
 
-function filterByCommenter(){
-
+function getMoviesByMonth(array, month){
+  
 }
 
+          
 /*
 Create a function called getRuntimes that takes in an array of movie
-entries objects as you see above. This function should use the native 
+objects as you see above. This function should use the native 
 map method to return a new array of only the runtimes of each film as a string.
 
 example output:
@@ -122,54 +118,81 @@ getRuntimes(lbDiary);
 // => ['104 minutes', '137 minutes', '98 minutes', '122 minutes']
 */
 
-function getRuntimes(){
-
+function getRuntimes(array){
+  
 }
 
 /*
-Create a function called getCommentCharacters that takes in an array of movie
-entries objects as you see above. This function should use the native 
-map method to return a new array of strings. As the function iterates over
-every movie entry object, it should iterate through every comment and add the
-first letter of the text of every comment to a string.
+Create a function called getTitleAndYear that takes in an array of movies.
+This function should use the native filter metho to return a new array of
+strings. Each string should be the move's title followed by the year in
+parenthis.
 
 example output:
-getCommentCharacters(lbDiary)
-// => ['LR', 'N', 'I', 'T]
+getTitleAndYear(movies);
+// => ['The Rule of Jenny Pen (2025)', 'Mickey 17 (2025)', 'The Monkey (2025)', 'Okja (2017)']
 */
 
-function getCommentCharacters(){
-
-}
-
-/*
-Create a function called getObjects that takes in an array of movie
-entries objects as you see above. This function should use the native 
-reduce method to return a new array of objects. Each object should have a key
-of `movie` set to the movie's title and release year. It should also have a
-key of `genre` set to the first genre listed in the genres property.
-
-example object
-{
-  movie: 'The Rule of Jenny Pen (2025)'
-  genre: 'Horror'
-}
-*/
-
-function getObjects(){
+function getTitleAndYear(movies){
   
 }
 
 /*
-Create a function called getCommentsByLength that takes in an array of movie
-entries objects as you see above. This function should use the native 
-reduce method to return a new array of the text of the comment objects that have
-more than 40 characters.
-
-example output
-getCommentsByLength(lbDiary);
+Create a function called getHorrorTitles that takes in an array of movies.
+This function should use the native reduce method to return a new array of
+the titles of every movie that has "Horror" in the move genres array.
 */
 
-function getCommentsByLength(){
+function getHorrorTitles(movies){
   
 }
+
+/*
+Create a function called getFirstComments that takes in an array of movies.
+This function should use the native reduce method to return a new array of 
+strings of the first comment in each movie's reviews array followed by a 
+linebreak character. Those strings should include the reviewer's username 
+and the review followd by a colon and ending with linebreak character.
+
+example output:
+getFirstComment(movies)
+// =>  'elizabeth-dane: Loved it!\nelizabeth-dane: NO NOT THE SAUCEEEEEEEEE!!!!!'\n' (... the rest follows the pattern)
+
+*/
+
+function getFirstComments(movies){
+  
+}
+
+// More advanced examples //
+/*
+Create a function called getMovieByCommenter that takes in an array of movie objects and a username
+of a commenter. This function should use the native filter method to return a new array of movies for
+every movie that has a comment made by the input commenter.
+*/
+
+function getMoviesByCommenter(movies, commenter){
+  
+};
+
+/*
+Create a function called getLongestComments that takes in an array of movie objects.
+This function should use the native map method to return a new array of strings of
+the longest comments for each movie. Assume each movie will have a comment, and it 
+could include more than one.
+
+example output:
+getLongestComments(movies);
+// => 
+[
+  'Rush and Lithgow killed it.',
+  'NO NOT THE SAUCEEEEEEEEE!!!!!',
+  "I also didn't find it particularly funny.",
+  'That moment with the baby superpig at the end gets me every time.'
+]
+*/
+
+function getLongestComments(movies){
+  
+}
+
