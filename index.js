@@ -247,6 +247,9 @@ getLongestComments(movies);
 */
 
 function getLongestComments(movies){
-  
+  return movies.map((movie) => 
+    movie.comments.reduce((acc, curr) => {
+      return curr.text.length > acc.text.length ? curr : acc;
+      }, movie.comments[0]).text);
 }
 
