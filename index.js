@@ -183,7 +183,12 @@ the titles of every movie that has "Horror" in the movie genres array.
 // C: uses reduce
 
 function getHorrorTitles(movies){
-  
+  return movies.reduce(function(acc, curr) {
+    if (curr.genres.includes('Horror')) {
+      acc.push(curr.title);
+    }
+    return acc;
+  }, [])
 }
 
 // seed?
@@ -202,7 +207,11 @@ getFirstComment(movies)
 */
 
 function getFirstComments(movies){
-  
+  return movies.reduce(function(acc, curr) {
+    acc += curr.comments[0].username + ': ' + curr.comments[0].text + '\n';
+    // console.log(acc);
+    return acc;
+  }, '')
 }
 
 // More advanced examples //
