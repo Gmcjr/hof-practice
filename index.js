@@ -93,8 +93,16 @@ filter method to return a new array of only the movie entry objects that
 have a runtime greater than 2 hours.
 */
 
+// I: takes an array of objects
+// O: return new array of only objects with runtime > 2 hours
+// C: use filter method
+
 function longerThanTwoHours(array){
   
+  return array.filter(function(item) { // created function, gave it param
+  
+    return item.runtime['length'] > 120; // make sure function returns true for condition
+  });
 }
 
 
@@ -104,9 +112,16 @@ objects and a month. This function should use the native filter method to return
 a new array of movies that were logged in the input month.
 */
 
+// I: takes array of objects and a month
+// O: returns new array of objects logged in input month
+// C: use filter()
+
 function getMoviesByMonth(array, month){
-  
+  return array.filter(function(item) {
+    return item.entryLogged.includes(month);
+  });
 }
+
 
 
 
@@ -121,8 +136,15 @@ getRuntimes(lbDiary);
 // => ['104 minutes', '137 minutes', '98 minutes', '122 minutes']
 */
 
+// I: takes array of objects as input
+// O: returns new array of only the runtimes of each object, as a string
+// C: use .map() method  
 function getRuntimes(array){
-  
+  return array.map(function(obj) {
+    return obj.runtime.length.toString() + ' minutes';
+
+
+  });
 }
 
 
@@ -130,7 +152,7 @@ function getRuntimes(array){
 /*
 Create a function called getTitleAndYear that takes in an array of movies.
 This function should use the native filter method to return a new array of
-strings. Each string should be the move's title followed by the year in
+strings. Each string should be the movie's title followed by the year in
 parenthesis.
 
 example output:
@@ -138,8 +160,15 @@ getTitleAndYear(movies);
 // => ['The Rule of Jenny Pen (2025)', 'Mickey 17 (2025)', 'The Monkey (2025)', 'Okja (2017)']
 */
 
+// I: takes array as input
+// O: returns new array of strings: strings should be movie's title followed by the year in parenthesis
+// C: use filter method
 function getTitleAndYear(movies){
-  
+  return movies.map(function(item) {
+    let result = item['title'] + ' (' + item['year'] + ')';
+    console.log(result);
+    return result;
+  })
 }
 
 
@@ -149,6 +178,9 @@ Create a function called getHorrorTitles that takes in an array of movies.
 This function should use the native reduce method to return a new array of
 the titles of every movie that has "Horror" in the movie genres array.
 */
+// I: takes array as input
+// O: returns new array of titles of every movie that has "Horror" in the movie genres array
+// C: uses reduce
 
 function getHorrorTitles(movies){
   
