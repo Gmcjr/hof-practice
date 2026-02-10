@@ -222,7 +222,11 @@ every movie that has a comment made by the input commenter.
 */
 
 function getMoviesByCommenter(movies, commenter){
-  
+  return movies.filter(function(curr) {
+    return curr.comments.some(function(comment) {
+      return comment.username === commenter;
+    });
+  });
 };
 
 /*
